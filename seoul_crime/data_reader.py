@@ -34,6 +34,7 @@ class DataReader:
     def csv_dframe(self) -> object:
         file = self.new_file()
         #1000단위 ,로 구분
+        #return pd.read_csv(file, encoding="UTF-8", thousands=",")
         return pd.read_csv(file, encoding="UTF-8", thousands=",")
 
     def xls_to_dframe(self, header, usecols ) -> object:
