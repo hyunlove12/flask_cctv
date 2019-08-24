@@ -21,3 +21,31 @@ class CrimeModel:
         station_lngs = [] #경도
 
         gmaps = self.dr.create_gmaps()
+        for name in station_names:
+            t = gmaps.geocode(name, language="ko")
+            station_addrs.append(t[0].get("formatted_address"))
+            t_loc = t[0].get("geometry")
+            #구글의 컬럼 명 그대로lat, lng -> api
+            station_lats.append(t_loc["location"]["lat"])
+            station_lngs.append(t_loc["location"]["lng"])
+            print(name + "--------------->" +t[0].get("formatted_address"))
+        gu_names = []
+        for name in station_addrs:
+            t = name.split()
+            #-1 : 뒤에서 한 글자
+            #:-1 : 0부터 맨 끝까지
+            gu_name = [gu for gu in t if gu[-1] == "구"][0]
+            gu_names.append(gu_name)
+        crime["구별"] = gu_names
+
+        #구 와 경찰서 위치가 다른 경우 수작업
+        crime.loc[crime["관서명"] == "혜화서", ["구별"]] == "종로구"
+        crime.loc[crime["관서명"] == "서부서", ["구별"]] == "은평구"
+        crime.loc[crime["관서명"] == "강서서", ["구별"]] == "양천구"
+        crime.loc[crime["관서명"] == "중앙서", ["구별"]] == "성북구"
+        crime.loc[crime["관서명"] == "방배서", ["구별"]] == "서초구"
+        crime.loc[crime["관서명"] == "수서서", ["구별"]] == "강남구"
+
+        print(crime)
+
+        crime.to_csv("./saved_data/crime_police.csv")
