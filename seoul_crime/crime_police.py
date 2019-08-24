@@ -13,3 +13,11 @@ class CrimeModel:
         self.dr.fname = "crime_in_seoul.csv"
         crime = self.dr.csv_dframe()
         print(crime)
+        station_names = []
+        for name in crime["관서명"]:
+            station_names.append("서울"+str(name[:-1]+"경찰서"))
+        station_addrs = []
+        station_lats = [] #위도
+        station_lngs = [] #경도
+
+        gmaps = self.dr.create_gmaps()
