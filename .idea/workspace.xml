@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e2a5494-2cdc-4b5e-8016-12bd7c927fec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/seoul_crime/crime_map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seoul_crime/data/US_Unemployment_Oct2012.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seoul_crime/data/us-states.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seoul_crime/folium_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seoul_crime/police_norm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seoul_crime/saved_data/crime_police.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seoul_crime/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/seoul_crime/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seoul_crime/crime_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/seoul_crime/crime_map.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +30,13 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ezen\PycharmProjects\tensorflow_cctv\seoul_crime" />
-      <recent name="C:\Users\ezen\PycharmProjects\tensorflow_cctv\seoul_crime\data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ezen\PycharmProjects\tensorflow_cctv\seoul_crime\data" />
       <recent name="C:\Users\ezen\PycharmProjects\tensorflow_cctv\seoul_crime\saved_data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ezen\PycharmProjects\tensorflow_cctv\seoul_crime" />
+      <recent name="C:\Users\ezen\PycharmProjects\tensorflow_cctv\seoul_crime\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,7 +97,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
